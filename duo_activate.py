@@ -50,10 +50,9 @@ except KeyError:
 
 print("secret", secret)
 
-print("10 Next OneTime Passwords!")
-# Generate 10 Otps!
+print("100 Next OneTime Passwords!")
 hotp = pyotp.HOTP(secret)
-for _ in range(10):
+for _ in range(100):
     print(hotp.at(_))
 
 with open('duotoken.hotp', 'w') as file:
